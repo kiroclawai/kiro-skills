@@ -1,0 +1,16 @@
+{
+  "name": "awwwards-design",
+  "version": "1.0.0",
+  "author": "Kiro",
+  "license": "MIT",
+  "description": "Design websites at Awwwards-winner quality. Typography, motion, color, spacing, and micro-interaction craft that separates portfolio-tier work from template-tier work.",
+  "triggers": [
+    "design landing page",
+    "make it beautiful",
+    "premium design",
+    "redesign UI",
+    "improve design",
+    "hero section"
+  ],
+  "dependencies": []
+}

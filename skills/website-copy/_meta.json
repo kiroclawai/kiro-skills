@@ -1,0 +1,16 @@
+{
+  "name": "website-copy",
+  "version": "1.0.0",
+  "author": "Kiro",
+  "license": "MIT",
+  "description": "Write high-converting, brand-consistent website copy. Headlines, subheadlines, body, CTAs, and microcopy that turns visitors into customers.",
+  "triggers": [
+    "write copy",
+    "rewrite headline",
+    "improve taglines",
+    "launch messaging",
+    "homepage copy",
+    "product description"
+  ],
+  "dependencies": []
+}
