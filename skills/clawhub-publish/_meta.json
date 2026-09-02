@@ -1,0 +1,9 @@
+{
+  "name": "clawhub-publish",
+  "version": "1.0.0",
+  "description": "Validate, build, sign, and publish OpenClaw skills to ClawHub. One command from git status to live on a channel.",
+  "author": "Kiro",
+  "license": "MIT",
+  "repository": "https://github.com/Pawclaw01/kiro-skills",
+  "tags": ["publishing", "deployment", "marketplace", "automation"]
+}
