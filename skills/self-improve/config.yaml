@@ -1,0 +1,131 @@
+# Self-Improve system configuration
+# Version: 1.0.0 · Kiro edition
+#
+# Edit user-config.yaml first to set paths, timezone, and agent identity.
+# scripts/setup.mjs reads user-config.yaml and materializes the resolved
+# paths into the storage block below on every setup run.
+
+version: "1.0.0"
+updated: "2026-09-02"
+
+# ─── Storage locations ─────────────────────────────────────────────
+# These are filled by setup.mjs from user-config.yaml.
+# Do not edit by hand unless you know what you're doing.
+
+storage:
+  root: ""                    # resolved from user-config.storage.root
+  knowledge_root: ""          # resolved from user-config.storage.knowledge_root
+  workspace_root: ""          # resolved from user-config.storage.workspace_root
+  last_success_ts: ""         # ISO timestamp of last successful run
+
+# ─── Schedule ──────────────────────────────────────────────────────
+
+schedule:
+  cron: "0 4 */3 * *"         # every 3 days at 04:00
+  model: "omniroute/T2"       # overridable in user-config.yaml
+
+# ─── Module registry (execution order) ─────────────────────────────
+
+modules:
+
+  feedback-collector:
+    enabled: true
+    version: "1.0.0"
+    order: 1
+    description: "Scan conversations, extract learning signals"
+    prompt: "prompts/feedback-collector.md"
+    data_dirs: ["data/feedback"]
+    inputs: ["memory/*.md", "data/reflections.md"]
+
+  distill-classifier:
+    enabled: true
+    version: "1.0.0"
+    order: 2
+    description: "Three-level distillation + theme classification + value density"
+    prompt: "prompts/distill-classifier.md"
+    data_dirs: ["data/themes"]
+    inputs: ["data/feedback/*.jsonl"]
+
+  memory-layer:
+    enabled: true
+    version: "1.0.0"
+    order: 3
+    description: "Tiered memory management (HOT / WARM / COLD)"
+    prompt: "prompts/memory-layer.md"
+    data_dirs: ["data/hot.md", "data/themes", "data/archive"]
+    params:
+      hot_limit: 100
+      promote_threshold: 3
+      promote_window_days: 7
+      demote_days: 30
+      archive_days: 90
+
+  proposer:
+    enabled: true
+    version: "1.0.0"
+    order: 4
+    description: "Determine output channel; produce solidification proposals"
+    prompt: "prompts/proposer.md"
+    data_dirs: ["proposals/PENDING.md", "drafts", "data/errors", "data/lessons", "data/high-value"]
+    inputs: ["data/themes/", "data/hot.md", "data/errors/", "data/lessons/"]
+
+  reflector:
+    enabled: true
+    version: "1.0.0"
+    order: 5
+    description: "Self-reflection; output feeds the next run"
+    prompt: "prompts/reflector.md"
+    data_dirs: ["data/reflections.md"]
+
+  profiler:
+    enabled: true
+    version: "1.0.0"
+    order: 6
+    description: "Team capability profile (every Nth run)"
+    prompt: "prompts/profiler.md"
+    data_dirs: ["data/profile.md"]
+    params:
+      run_every: 3
+
+  notify:
+    enabled: true
+    version: "1.0.0"
+    order: 7
+    description: "Notify owner of pending approval items"
+    prompt: "prompts/notify.md"
+    inputs: ["proposals/PENDING.md"]
+
+  execution:
+    enabled: true
+    version: "1.0.0"
+    order: 99
+    description: "Apply approved proposals (manual trigger)"
+    prompt: "prompts/execution.md"
+    trigger: "manual"
+
+# ─── Approval rules ────────────────────────────────────────────────
+
+approval:
+  required_files:
+    - "AGENTS.md"
+    - "SOUL.md"
+    - "TOOLS.md"
+    - "MEMORY.md"
+    - "HEARTBEAT.md"
+    - "openclaw.json"
+    - "SKILL.md"
+
+  # auto_files_pattern is resolved at runtime against storage.root
+  # and knowledge_root.
+  auto_files_pattern:
+    - "{root}/data/*"
+    - "{knowledge_root}/*"
+
+# ─── Global parameters ─────────────────────────────────────────────
+
+global:
+  learning_from_silence: false       # never infer rules from silence
+  auto_delete: false                 # never auto-delete; always archive
+  confirm_before_promote: false      # promotion to HOT is automatic
+  max_proposals_per_run: 50          # cap proposals; truncate by confidence
+  step_timeout_seconds: 600          # 10 min cap per step

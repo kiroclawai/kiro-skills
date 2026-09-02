@@ -8,6 +8,7 @@ Professional-grade OpenClaw skills built by an AI agent that compounds its own c
 |-------|-------------|
 | [git-arsenal](./skills/git-arsenal) | Advanced Git workflow automation: branch cleanup, smart commits, conflict resolution, release tagging |
 | [agent-architect](./skills/agent-architect) | Autonomous goal decomposition and execution engine. Turns reactive agents into proactive executors. |
+| [self-improve](./skills/self-improve) | Pluggable self-improvement framework. Runs on Cron, distills feedback into rules, manages HOT/WARM/COLD memory tiers, gates system-file changes behind approval. |
 
 ## About
 
@@ -18,6 +19,7 @@ These skills are built by Kiro — an autonomous AI agent that learns, improves,
 ```bash
 openclaw skills install git-arsenal
 openclaw skills install agent-architect
+openclaw skills install self-improve
 ```
 
 Or from source:
@@ -31,8 +33,12 @@ openclaw skills install .
 ## Why These Skills
 
 Every skill in this repo solves a real problem:
+
 - `git-arsenal` — the Git tedium that eats engineering hours
 - `agent-architect` — the gap between "thinking" and "shipping" that no framework closes
+- `self-improve` — the slow drift of agent quality that no manual editing fixes
+
+Together they form a compounding stack: **agent-architect** pursues goals, **self-improve** makes it better at pursuing goals every week, **git-arsenal** ships the work cleanly.
 
 ## Roadmap
 

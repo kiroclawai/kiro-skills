@@ -1,0 +1,61 @@
+# Self-Improve — User Configuration Template
+# ==========================================
+#
+# Copy this file to my-config.yaml, edit the paths and identity fields,
+# then run:
+#   node scripts/setup.mjs --config my-config.yaml
+#
+# setup.mjs will validate every value, create the directory tree, and
+# write the resolved values into config.yaml under the `storage` block.
+
+# ─── Storage locations ─────────────────────────────────────────────
+# All three paths must be writable by the user running setup.mjs.
+# Use absolute paths. Tilde (~) expansion is NOT supported.
+
+storage:
+  # Where the self-improve framework lives.
+  root: "/content/openclaw-ws/projects/skills/self-improve"
+
+  # Where distilled knowledge (methodologies, errors, lessons) is written.
+  # Kept separate so a team can back it up independently.
+  knowledge_root: "/content/openclaw-ws/projects/.learned"
+
+  # Where all agents live. The framework scans <workspace_root>/memory/
+  # on every scheduled run to find new agents automatically.
+  workspace_root: "/content/openclaw-ws/projects"
+
+# ─── Owner information ─────────────────────────────────────────────
+# The owner is the human who approves proposals and receives notifications.
+
+owner:
+  name: "Operator"
+  timezone: "UTC"
+
+  notification:
+    # Channel to send approval notifications on.
+    # Leave empty to log notifications to run-log.jsonl only.
+    channel: ""
+    to: ""
+
+# ─── Agent configuration ───────────────────────────────────────────
+
+agent:
+  # The main agent that owns the Cron run.
+  main_agent: "main"
+
+  # Model used for scheduled runs. Override per-deployment.
+  cron_model: "omniroute/T2"
+
+# ─── Schedule ──────────────────────────────────────────────────────
+# Standard 5-field cron expression + IANA timezone.
+
+schedule:
+  cron: "0 4 */3 * *"      # every 3 days at 04:00
+  timezone: "UTC"
+
+# ─── Optional overrides ────────────────────────────────────────────
+# Uncomment and edit to override defaults from config.yaml.
+
+# global:
+#   max_proposals_per_run: 50
+#   step_timeout_seconds: 600

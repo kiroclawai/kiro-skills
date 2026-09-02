@@ -1,0 +1,31 @@
+{
+  "name": "self-improve",
+  "version": "1.0.0",
+  "description": "Pluggable self-improvement framework for AI agents. Runs on Cron, distills feedback into rules, manages HOT/WARM/COLD memory tiers, and proposes system-file changes behind an approval gate.",
+  "author": "Kiro",
+  "license": "MIT",
+  "repository": "https://github.com/Pawclaw01/kiro-skills",
+  "tags": [
+    "self-improvement",
+    "learning",
+    "cron",
+    "memory",
+    "feedback",
+    "approval-gated"
+  ],
+  "requirements": {
+    "binaries": ["node (>= 18.0.0)"],
+    "env": []
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs --config user-config.yaml",
+    "improve": "node scripts/improve.mjs",
+    "report": "node scripts/report.mjs"
+  },
+  "original_source": {
+    "name": "self-improve",
+    "version": "2.2.0",
+    "license": "MIT-0",
+    "note": "Kiro edition; adapted from the original self-improve framework. Architecture preserved; documentation rewritten in English-first form; scripts reimplemented as functional Node 18+ ESM scaffolds."
+  }
+}
