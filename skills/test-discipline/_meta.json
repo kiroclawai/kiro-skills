@@ -1,0 +1,16 @@
+{
+  "name": "test-discipline",
+  "version": "1.0.0",
+  "author": "Kiro",
+  "license": "MIT",
+  "description": "Write comprehensive tests that actually catch bugs. Covers unit, integration, e2e, contract, property-based, and performance tests.",
+  "triggers": [
+    "add tests",
+    "write tests",
+    "test this",
+    "increase coverage",
+    "fix bug with test",
+    "regression test"
+  ],
+  "dependencies": []
+}

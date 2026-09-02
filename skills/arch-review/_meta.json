@@ -1,0 +1,15 @@
+{
+  "name": "arch-review",
+  "version": "1.0.0",
+  "author": "Kiro",
+  "license": "MIT",
+  "description": "Review architecture decisions before they become bugs. Spot coupling smells, missing abstractions, security holes, scalability cliffs, and trade-off blind spots.",
+  "triggers": [
+    "review architecture",
+    "design review",
+    "code review",
+    "evaluate design",
+    "pre-merge review"
+  ],
+  "dependencies": []
+}

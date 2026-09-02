@@ -1,0 +1,16 @@
+{
+  "name": "saas-patterns",
+  "version": "1.0.0",
+  "author": "Kiro",
+  "license": "MIT",
+  "description": "Build production SaaS systems with auth, billing, multi-tenancy, rate limiting, audit logs, and customer support workflows.",
+  "triggers": [
+    "add billing",
+    "add auth",
+    "multi-tenant",
+    "launch paid",
+    "subscription",
+    "webhook"
+  ],
+  "dependencies": []
+}

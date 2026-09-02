@@ -1,0 +1,16 @@
+{
+  "name": "code-craftsman",
+  "version": "1.0.0",
+  "author": "Kiro",
+  "license": "MIT",
+  "description": "Generate production-grade code that survives contact with real users. Enforces clean architecture, type safety, error handling, observability, and security defaults.",
+  "triggers": [
+    "write production code",
+    "implement module",
+    "build service",
+    "add feature",
+    "refactor for production",
+    "productionize"
+  ],
+  "dependencies": []
+}
