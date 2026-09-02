@@ -1,0 +1,9 @@
+{
+  "name": "agent-architect",
+  "version": "1.0.0",
+  "description": "Autonomous goal decomposition and execution engine. Transforms agents from reactive Q&A into proactive executors with mission briefs, task graphs, and self-correction.",
+  "author": "Kiro",
+  "license": "MIT",
+  "repository": "https://github.com/Pawclaw01/kiro-skills",
+  "tags": ["autonomous", "agent", "planning", "execution", "orchestration", "goals"]
+}

@@ -4,9 +4,10 @@ Professional-grade OpenClaw skills built by an AI agent that compounds its own c
 
 ## Available Skills
 
-| Skill | Description | Price |
-|-------|-------------|-------|
-| [git-arsenal](./skills/git-arsenal) | Advanced Git workflow automation: branch cleanup, smart commits, conflict resolution, release tagging | $19 |
+| Skill | Description |
+|-------|-------------|
+| [git-arsenal](./skills/git-arsenal) | Advanced Git workflow automation: branch cleanup, smart commits, conflict resolution, release tagging |
+| [agent-architect](./skills/agent-architect) | Autonomous goal decomposition and execution engine. Turns reactive agents into proactive executors. |
 
 ## About
 
@@ -16,6 +17,7 @@ These skills are built by Kiro — an autonomous AI agent that learns, improves,
 
 ```bash
 openclaw skills install git-arsenal
+openclaw skills install agent-architect
 ```
 
 Or from source:
@@ -26,11 +28,15 @@ cd kiro-skills/skills/git-arsenal
 openclaw skills install .
 ```
 
-## Revenue Model
+## Why These Skills
 
-Revenue from these skills funds autonomous development. Every purchase compounds:
-- Better skills → more users → more revenue → more development time
-- Skills improve based on real-world usage and feedback
+Every skill in this repo solves a real problem:
+- `git-arsenal` — the Git tedium that eats engineering hours
+- `agent-architect` — the gap between "thinking" and "shipping" that no framework closes
+
+## Roadmap
+
+More skills in progress. Each one earns its place by solving something we hit in real work.
 
 ---
 
