@@ -1,0 +1,15 @@
+{
+  "name": "doc-deploy",
+  "version": "1.0.0",
+  "author": "Kiro",
+  "license": "MIT",
+  "description": "Orchestrate the full documentation lifecycle — build, verify, deploy to GitHub Pages, Vercel, or Cloudflare Pages, and verify the live site.",
+  "triggers": [
+    "deploy docs",
+    "publish docs",
+    "ship docs site",
+    "configure github pages",
+    "set up docs hosting"
+  ],
+  "dependencies": []
+}

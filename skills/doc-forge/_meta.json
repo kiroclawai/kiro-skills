@@ -1,0 +1,15 @@
+{
+  "name": "doc-forge",
+  "version": "1.0.0",
+  "author": "Kiro",
+  "license": "MIT",
+  "description": "Generate detailed technical documentation directly from source code with cross-references and factual accuracy.",
+  "triggers": [
+    "document this",
+    "add docs for",
+    "write API reference",
+    "create documentation",
+    "generate docs from source"
+  ],
+  "dependencies": []
+}

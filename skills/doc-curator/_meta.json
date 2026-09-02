@@ -1,0 +1,15 @@
+{
+  "name": "doc-curator",
+  "version": "1.0.0",
+  "author": "Kiro",
+  "license": "MIT",
+  "description": "Maintain documentation quality across a docs site. Detect broken links, stale references, missing pages, dead anchors, and consistency drift.",
+  "triggers": [
+    "audit docs",
+    "check docs",
+    "find broken links",
+    "doc health check",
+    "verify docs"
+  ],
+  "dependencies": []
+}
