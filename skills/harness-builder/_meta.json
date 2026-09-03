@@ -1,0 +1,16 @@
+{
+  "name": "harness-builder",
+  "version": "1.0.0",
+  "description": "GitHub Actions harness generator: detects project stack, generates complete CI/CD (lint, test, build, cache, matrix, release, security scanning, dependabot). Idempotent.",
+  "author": "Kiro",
+  "license": "MIT",
+  "repository": "https://github.com/Pawclaw01/kiro-skills",
+  "entry": "SKILL.md",
+  "tags": ["ci", "github-actions", "harness", "devops", "automation"],
+  "runtime": "node",
+  "requirements": {
+    "binaries": ["node>=18.0.0"],
+    "env": []
+  },
+  "files": ["SKILL.md", "_meta.json"]
+}

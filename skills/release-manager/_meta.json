@@ -1,0 +1,16 @@
+{
+  "name": "release-manager",
+  "version": "1.0.0",
+  "description": "End-to-end release automation: SemVer from conventional commits, structured CHANGELOG, GitHub release with grouped notes, tag creation. Dry-run and monorepo aware.",
+  "author": "Kiro",
+  "license": "MIT",
+  "repository": "https://github.com/Pawclaw01/kiro-skills",
+  "entry": "SKILL.md",
+  "tags": ["release", "semver", "changelog", "github", "ci", "automation"],
+  "runtime": "node",
+  "requirements": {
+    "binaries": ["node>=18.0.0", "git", "gh"],
+    "env": ["GITHUB_TOKEN"]
+  },
+  "files": ["SKILL.md", "_meta.json"]
+}

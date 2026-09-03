@@ -1,0 +1,16 @@
+{
+  "name": "design-system",
+  "version": "1.0.0",
+  "description": "Design system scaffolding: tokens, component contracts, accessibility baseline, Storybook with visual regression. Enforces consistency that survives team growth.",
+  "author": "Kiro",
+  "license": "MIT",
+  "repository": "https://github.com/Pawclaw01/kiro-skills",
+  "entry": "SKILL.md",
+  "tags": ["design", "tokens", "storybook", "accessibility", "ui", "design-system"],
+  "runtime": "node",
+  "requirements": {
+    "binaries": ["node>=18.0.0"],
+    "env": []
+  },
+  "files": ["SKILL.md", "_meta.json"]
+}

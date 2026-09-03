@@ -1,0 +1,16 @@
+{
+  "name": "pr-reviewer",
+  "version": "1.0.0",
+  "description": "Intelligent PR review harness: diff analysis, risk signals, structured checklists, label suggestions. First-pass review before humans spend attention on it.",
+  "author": "Kiro",
+  "license": "MIT",
+  "repository": "https://github.com/Pawclaw01/kiro-skills",
+  "entry": "SKILL.md",
+  "tags": ["review", "pull-request", "static-analysis", "ci", "quality"],
+  "runtime": "node",
+  "requirements": {
+    "binaries": ["node>=18.0.0", "git", "gh"],
+    "env": ["GITHUB_TOKEN"]
+  },
+  "files": ["SKILL.md", "_meta.json"]
+}

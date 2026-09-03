@@ -1,0 +1,16 @@
+{
+  "name": "python-tooling",
+  "version": "1.0.0",
+  "description": "Production Python project scaffolding: pyproject.toml, ruff, mypy strict, pytest with coverage, pre-commit, CI matrix. One skill, fully wired.",
+  "author": "Kiro",
+  "license": "MIT",
+  "repository": "https://github.com/Pawclaw01/kiro-skills",
+  "entry": "SKILL.md",
+  "tags": ["python", "tooling", "pyproject", "ruff", "mypy", "pytest", "pre-commit"],
+  "runtime": "python",
+  "requirements": {
+    "binaries": ["python>=3.11", "uv (optional)"],
+    "env": []
+  },
+  "files": ["SKILL.md", "_meta.json"]
+}
