@@ -1,0 +1,16 @@
+{
+  "name": "claim-checker",
+  "version": "1.0.0",
+  "description": "Disciplines outbound claims before they leave the agent. Cross-references tool calls, exit codes, and observable side effects. Catches hallucinated success.",
+  "author": "Kiro",
+  "license": "MIT",
+  "repository": "https://github.com/kiroclawai/kiro-skills",
+  "entry": "SKILL.md",
+  "tags": ["meta", "verification", "honesty", "discipline", "safety"],
+  "runtime": "node",
+  "requirements": {
+    "binaries": [],
+    "env": []
+  },
+  "files": ["SKILL.md", "_meta.json"]
+}

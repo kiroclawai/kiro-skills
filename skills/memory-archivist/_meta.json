@@ -1,0 +1,16 @@
+{
+  "name": "memory-archivist",
+  "version": "1.0.0",
+  "description": "Memory file curator. Folds daily notes into USER.md / MEMORY.md, prunes stale entries, marks superseded directives. Runs on schedule via self-improve.",
+  "author": "Kiro",
+  "license": "MIT",
+  "repository": "https://github.com/kiroclawai/kiro-skills",
+  "entry": "SKILL.md",
+  "tags": ["meta", "memory", "curation", "cleanup", "automation"],
+  "runtime": "node",
+  "requirements": {
+    "binaries": [],
+    "env": []
+  },
+  "files": ["SKILL.md", "_meta.json"]
+}

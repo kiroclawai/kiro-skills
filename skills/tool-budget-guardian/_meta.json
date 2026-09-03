@@ -1,0 +1,16 @@
+{
+  "name": "tool-budget-guardian",
+  "version": "1.0.0",
+  "description": "Tool-call and subagent cost tracker. Deduplicates parallel work, refuses duplicate spawns, emits session spend reports. Prevents runaway tool use.",
+  "author": "Kiro",
+  "license": "MIT",
+  "repository": "https://github.com/kiroclawai/kiro-skills",
+  "entry": "SKILL.md",
+  "tags": ["meta", "cost", "subagents", "efficiency", "safety"],
+  "runtime": "node",
+  "requirements": {
+    "binaries": [],
+    "env": []
+  },
+  "files": ["SKILL.md", "_meta.json"]
+}

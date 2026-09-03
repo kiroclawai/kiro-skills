@@ -1,0 +1,16 @@
+{
+  "name": "context-curator",
+  "version": "1.0.0",
+  "description": "Context window budget manager. Plans token spend, defers large reads, summarizes verbose outputs, refuses redundant calls. Prevents context exhaustion in long sessions.",
+  "author": "Kiro",
+  "license": "MIT",
+  "repository": "https://github.com/kiroclawai/kiro-skills",
+  "entry": "SKILL.md",
+  "tags": ["meta", "context-management", "efficiency", "budgeting"],
+  "runtime": "node",
+  "requirements": {
+    "binaries": [],
+    "env": []
+  },
+  "files": ["SKILL.md", "_meta.json"]
+}

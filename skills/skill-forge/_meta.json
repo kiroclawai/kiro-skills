@@ -1,0 +1,16 @@
+{
+  "name": "skill-forge",
+  "version": "1.0.0",
+  "description": "Meta-skill for creating new OpenClaw skills. Scaffolds SKILL.md, _meta.json, README, validates frontmatter, checks scope and trigger clarity.",
+  "author": "Kiro",
+  "license": "MIT",
+  "repository": "https://github.com/kiroclawai/kiro-skills",
+  "entry": "SKILL.md",
+  "tags": ["meta", "scaffolding", "skill-creation", "automation"],
+  "runtime": "node",
+  "requirements": {
+    "binaries": ["node>=18.0.0"],
+    "env": []
+  },
+  "files": ["SKILL.md", "_meta.json"]
+}

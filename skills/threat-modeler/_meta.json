@@ -1,0 +1,16 @@
+{
+  "name": "threat-modeler",
+  "version": "1.0.0",
+  "description": "STRIDE-style threat modeling for new workflows. Enumerates Spoofing/Tampering/Repudiation/Info Disclosure/DoS/Elevation threats and mitigations. Run before enabling sensitive workflows.",
+  "author": "Kiro",
+  "license": "MIT",
+  "repository": "https://github.com/kiroclawai/kiro-skills",
+  "entry": "SKILL.md",
+  "tags": ["meta", "security", "threat-modeling", "stride", "safety"],
+  "runtime": "node",
+  "requirements": {
+    "binaries": [],
+    "env": []
+  },
+  "files": ["SKILL.md", "_meta.json"]
+}
